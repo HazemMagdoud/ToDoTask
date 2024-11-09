@@ -1,0 +1,62 @@
+.sidebar {
+    width: $sidebar-width;
+    background-color: $background-color;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    position: fixed;
+    height: 100%;
+
+    .menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-icon {
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        height: 100%; // Pour s'assurer que la section prenne toute la hauteur de l'aside
+        padding: 20px;
+
+        ul {
+            list-style: none;
+            margin-top: 20px;
+
+            li {
+                padding: 10px 0;
+
+                & > span {
+                    font-weight: bold;
+                    color: gray;
+                    font-size: $font-size-small;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .count {
+                        background-color: #ccc;
+                        padding: 0 8px;
+                        border-radius: $border-radius;
+                    }
+                }
+            }
+        }
+
+        .settings {
+            margin-top: auto; // Aligne la deuxième ul en bas de l'aside
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+
+        .search-bar {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    }
+
+    .task-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+
+        .card {
+            padding: 20px;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
+
+            h2 {
+                font-size: $font-size-large;
+                margin-bottom: 10px;
+            }
+
+            ul, p {
+                font-size: $font-size-small;
+            }
+        }
+
+        // Cartes spécifiques avec couleur de fond
+        .card-social-media {
+            background-color: $card-background-yellow;
+        }
+
+        .card-content-strategy {
+            background-color: $card-background-blue;
+        }
+
+        .card-email-tests {
+            background-color: $card-background-pink;
+        }
+
+        .card-banner-ads {
+            background-color: $card-background-orange;
+        }
+
+        .add-card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: #aaa;
+            cursor: pointer;
+            background-color: $card-background-grey;
+        }
+    }
+}
+.root-main {
+    margin-left: 250px;
+}

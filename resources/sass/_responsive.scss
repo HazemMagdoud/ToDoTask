@@ -1,0 +1,16 @@
+// Responsive Sidebar pour mobile
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-$sidebar-width);
+        position: fixed;
+        z-index: 10;
+
+        &.active {
+            transform: translateX(0);
+        }
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
